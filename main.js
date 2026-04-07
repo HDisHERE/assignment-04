@@ -1,3 +1,16 @@
+// List of pages with titles and URLs
+const pages = [
+    { title: 'Home', url: 'index.html' },
+    { title: 'About Us', url: 'about.html' },
+    { title: 'Log In', url: 'login.html' },
+    { title: 'Review', url: 'review.html' },
+    { title: 'Ancient Civilizations', url: 'ancient.html' },
+    { title: 'Renaissance & Early Modern', url: 'renaissance.html' },
+    { title: 'Industrial Revolution', url: 'industrial.html' },
+    { title: 'World Wars', url: 'world-wars.html' }
+];
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Fade in on page load
     document.body.style.opacity = '1';
