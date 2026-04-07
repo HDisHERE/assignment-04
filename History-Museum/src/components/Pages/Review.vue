@@ -33,7 +33,7 @@
 
       <section class="page-section form-section">
         <h2>Contact Us</h2>
-        <!-- @submit.prevent 阻止页面刷新 -->
+        <!-- prevent page refresh -->
         <form @submit.prevent="handleSubmit">
           <label for="name">Name</label>
           <input
