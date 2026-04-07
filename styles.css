@@ -15,7 +15,7 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: url("image/paper.png") center / cover no-repeat fixed;
+  background: url("paper.png") center / cover no-repeat fixed;
   background-color: var(--background);
   color: var(--text);
 }
