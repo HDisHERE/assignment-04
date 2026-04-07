@@ -13,21 +13,3 @@
 
 </script>
 
-<style scoped>
-.site-footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-}
-
-.footer-content {
-  text-align: center;
-  color: var(--muted);
-  display: grid;
-  gap: 0.5rem;
-}
-
-.footer-content p {
-  margin: 0;
-}
-</style>
