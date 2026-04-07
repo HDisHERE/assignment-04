@@ -62,11 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // Handle link clicks for fade out transition
 document.addEventListener('click', function(e) {
     const link = e.target.closest('a[href]');
-    if (link && link.href.startsWith(window.location.origin) && !link.hasAttribute('download') && !link.getAttribute('target')) {
+
+    if (
+        link &&
+        link.href.startsWith(window.location.origin) &&
+        !link.hasAttribute('download') &&
+        !link.getAttribute('target') &&
+        !link.closest('#search-results') // 👈 ADD THIS
+    ) {
         e.preventDefault();
         document.body.style.opacity = '0';
         setTimeout(() => {
             window.location.href = link.href;
-        }, 300); // Match the transition duration
+        }, 300);
     }
 });
+
