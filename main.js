@@ -10,7 +10,6 @@ const pages = [
     { title: 'World Wars', url: 'world-wars.html' }
 ];
 
-
 document.addEventListener('DOMContentLoaded', function() {
     // Fade in on page load
     document.body.style.opacity = '1';
