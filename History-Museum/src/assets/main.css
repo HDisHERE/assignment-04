@@ -1,11 +1,11 @@
 :root {
-  --background: #f8fafc;
-  --surface: #ffffff;
-  --primary: #1d4ed8;
-  --primary-dark: #1e40af;
-  --text: #0f172a;
-  --muted: #475569;
-  --border: #e2e8f0;
+  --background: #bba576;
+  --surface: #221c17;
+  --primary: #ece1ac;
+  --primary-dark: #ebe996;
+  --text: #dfe2ec;
+  --muted: hsl(19, 27%, 82%);
+  --border: #c4b29b;
 }
 
 * {
@@ -15,8 +15,13 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--background);
+  background: url("./paper.png") center / cover no-repeat fixed;
+  background-color: var(--background);
   color: var(--text);
+}
+
+.texture-homepage {
+  background: url("atlas.jpg") center / cover no-repeat fixed;
 }
 
 .container {
@@ -124,6 +129,7 @@ body {
   place-items: center;
   padding: 3rem 0;
   text-align: center;
+  color: #221c17;
 }
 
 .hero-content h1 {
@@ -135,7 +141,7 @@ body {
 .hero-content p {
   margin: 0 auto 2rem;
   max-width: 640px;
-  color: var(--muted);
+  color: #221c17;
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -253,7 +259,13 @@ body {
 }
 
 .purpose {
-  padding: 4rem 0;
+  padding: 3rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  background: url("./paper.png") center / cover no-repeat, var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .purpose-intro {
@@ -269,14 +281,14 @@ body {
 
 .purpose-intro p {
   margin: 0;
-  color: var(--muted);
+  color: var(--surface);
   line-height: 1.75;
 }
 
 .link-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .link-card {
