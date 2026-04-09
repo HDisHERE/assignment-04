@@ -10,6 +10,7 @@ import WorldWars   from './components/Pages/World-wars.vue'
 import About       from './components/Pages/About.vue'
 import Login       from './components/Pages/Login.vue'
 import Review      from './components/Pages/Review.vue'
+import CreateNew      from './components/Pages/CreateNew.vue'
 
 const routes = [
   { path: '/',            component: Home },
@@ -20,6 +21,7 @@ const routes = [
   { path: '/about',        component: About },
   { path: '/login',        component: Login },
   { path: '/review',       component: Review },
+  { path: '/create-account', component: CreateNew },
 ]
 
 export default createRouter({
