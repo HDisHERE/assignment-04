@@ -67,7 +67,9 @@
           <!-- success message -->
           <p v-if="successMsg" style="color: green; margin: 0;">{{ successMsg }}</p>
 
-          <button type="submit" class="button">Submit Feedback</button>
+          <button type="submit" class="button" :disabled="loading">
+          {{ loading ? 'Submitting…' : 'Submit Feedback' }}
+          </button>
         </form>
       </section>
     </div>
@@ -83,23 +85,39 @@ const issue = ref('')
 
 const errorMsg   = ref('')
 const successMsg = ref('')
+const loading    = ref(false)
 
-function handleSubmit() {
+async function handleSubmit() {
   errorMsg.value   = ''
   successMsg.value = ''
 
-  // No blank
   if (!name.value.trim() || !email.value.trim() || !issue.value.trim()) {
     errorMsg.value = 'Please fill in all fields before submitting.'
     return
   }
 
-  // successful upload
-  successMsg.value = `Thank you, ${name.value}! Your feedback has been received.`
+  loading.value = true
 
-  // Clear form
-  name.value  = ''
-  email.value = ''
-  issue.value = ''
+  try {
+    const res  = await fetch('/api/feedback', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ name: name.value, email: email.value, issue: issue.value }),
+    })
+    const data = await res.json()
+
+    if (!res.ok) {
+      errorMsg.value = data.error
+    } else {
+      successMsg.value = data.message
+      name.value  = ''
+      email.value = ''
+      issue.value = ''
+    }
+  } catch {
+    errorMsg.value = 'Cannot connect to server. Please try again.'
+  } finally {
+    loading.value = false
+  }
 }
 </script>

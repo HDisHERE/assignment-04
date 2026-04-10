@@ -39,7 +39,7 @@
           <p>Don't have an account yet? Click here to create one.</p>
         </RouterLink>
 
-          <button type="submit" class="button">Log In</button>
+          <button type="submit" class="button" :disabled="loading">Log In</button>
         </form>
       </section>
     </div>
@@ -48,37 +48,44 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { userInfo } from '@/userInfo.js'
 
-// fake account
-const MOCK_USERS = [
-  { email: 'user@example.com', password: '123456' },
-  { email: 'admin@historyhub.com', password: 'admin' },
-]
+const { setUser } = userInfo() 
 
-// Input
-const email    = ref('')
-const password = ref('')
-
-// receive message
+const email      = ref('')
+const password   = ref('')
 const errorMsg   = ref('')
 const successMsg = ref('')
+const loading    = ref(false)
 
-// Login function
-function handleLogin() {
+const router = useRouter()
 
+async function handleLogin() {
   errorMsg.value   = ''
   successMsg.value = ''
+  loading.value    = true
 
+  try {
+    const res  = await fetch('/api/login', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: email.value, password: password.value }),
+    })
+    const data = await res.json()
 
-  const user = MOCK_USERS.find(
-    u => u.email === email.value && u.password === password.value
-  )
-
-  if (user) {
-    successMsg.value = `Welcome back, ${email.value}!`
-    // In a real project, you would: save token, redirect page, etc.
-  } else {
-    errorMsg.value = 'Invalid email or password.'
+    if (!res.ok) {
+      errorMsg.value = data.error
+    } else {
+      setUser(email.value)
+      successMsg.value = data.message
+      // After successful login, redirect to home page after 1 second
+      setTimeout(() => router.push('/'), 1000)
+    }
+  } catch {
+    errorMsg.value = 'Cannot connect to server. Please try again.'
+  } finally {
+    loading.value = false
   }
 }
 </script>

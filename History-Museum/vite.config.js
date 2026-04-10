@@ -10,9 +10,14 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  //This is updated by copilot.
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
+  },server: {
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  }
 })

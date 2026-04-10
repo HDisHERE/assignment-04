@@ -3,7 +3,6 @@
     <div class="container header-inner">
       <RouterLink to="/" class="brand">History Hub</RouterLink>
 
-      <!-- 搜索框：原先由 main.js 动态插入，现在直接写在模板里 -->
       <div class="search-container" ref="searchContainer">
         <input
           type="text"
@@ -11,7 +10,6 @@
           placeholder="Search pages..."
           v-model="searchQuery"
         />
-        <!-- v-if 代替 :empty CSS；v-for 代替 forEach + createElement -->
         <div id="search-results" v-if="searchResults.length > 0">
           <RouterLink
             v-for="page in searchResults"
@@ -31,12 +29,23 @@
         <RouterLink to="/login">Log In</RouterLink>
         <RouterLink to="/review">Review</RouterLink>
       </nav>
+
+      <!-- Account status — pushed to far right via margin-left: auto -->
+      <RouterLink v-if="!currentUser" to="/login" class="account-status not-logged-in">
+        Not logged in
+      </RouterLink>
+      <span v-else class="account-status logged-in">
+        {{ currentUser }}
+      </span>
     </div>
   </header>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { userInfo } from '@/userInfo.js'
+
+const { currentUser } = userInfo()
 
 const pages = [
   { name: 'Home',                    route: '/' },
