@@ -14,7 +14,7 @@
           we presented historical information, we want to hear from you.
         </p>
 
-        <article class="review-card">
+        <article class="page-section">
           <h3>Research Accuracy</h3>
           <p>
             Report any mistakes in dates, events, sources, or interpretations
@@ -22,7 +22,7 @@
           </p>
         </article>
 
-        <article class="review-card">
+        <article class="page-section">
           <h3>Website Experience</h3>
           <p>
             Tell us about navigation problems, broken links, or any part of the
