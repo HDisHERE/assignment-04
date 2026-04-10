@@ -56,6 +56,8 @@ const pages = [
   { name: 'Renaissance & Early Modern', route: '/renaissance' },
   { name: 'Industrial Revolution',  route: '/industrial' },
   { name: 'World Wars',             route: '/world-wars' },
+  { name: 'Concurrent Events', url: '' }, //No URL will be provided, a fodder result
+  { name: 'Modern Era', url: '' } //No URL will be provided, a fodder result
 ]
 
 const searchQuery = ref('')
