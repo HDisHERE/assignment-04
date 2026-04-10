@@ -3,14 +3,14 @@
 This is a history website for you to learn important factoids about events or things that has shaped culture. Made for historian clients, intended to be used by a general audience.
 
   - Designed by:
-   - Hao Ding (Programmer, backend database set up, login & review function designer.)
+   - Hao Ding (Programmer, backend database set up, login & review function designer.)101217067
    - Anton (Programmer, created inital design, search bar creator) 101342716
    - Alex Sok (Visual Designer, animations, contents, and styling.) 101388692
    - Hamza(Visual Designer, contents and styling. Created design document & slides) 101377142
 
 ## AI-Usage
 
-Used Chat-GPT to generate article content (Renaissance, World-War, Ancient Civilizaiton, Industrial Revolutuion), and to explain coding concepts.
+Used Chat-GPT to generate article content (Renaissance, World-War, Ancient Civilizaiton, Industrial Revolutuion), and to explain coding concepts. Used Copilot to help build a simple local database, which is not supported by Github but runs successfully in local drive.
 
 ## Recommended IDE Setup
 
