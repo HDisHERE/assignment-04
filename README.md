@@ -2,11 +2,11 @@
 
 This is a history website for you to learn the major historical changes in 21 century
 
-Designed by:
-Hao Ding (Programmer,backend database set up, login&review function designer)
-Anton(Programmer)
-Alex(Visual designer)
-Hamza()
+  - Designed by:
+   - Hao Ding (Programmer,backend database set up, login&review function designer)
+   - Anton(Programmer)
+   - Alex(Visual designer)
+   - Hamza()
 
 ## Recommended IDE Setup
 
