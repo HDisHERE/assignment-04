@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-  ],
+  ],base: '/assignment-04/',
   //This is updated by copilot.
   resolve: {
     alias: {
