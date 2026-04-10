@@ -35,9 +35,8 @@
           <!-- success message -->
           <p v-if="successMsg" style="color: green; margin: 0;">{{ successMsg }}</p>
 
-          <RouterLink class="link-card" to="/create-account">
-          <h3>Don't have an account yet?</h3>
-          <p>Click here to create one.</p>
+          <RouterLink  to="/create-account">
+          <p>Don't have an account yet? Click here to create one.</p>
         </RouterLink>
 
           <button type="submit" class="button">Log In</button>
