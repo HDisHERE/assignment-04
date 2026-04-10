@@ -17,6 +17,7 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: url("./atlas.jpg") center / cover no-repeat fixed;
   background-color: var(--background);
+
   color: var(--text);
 }
 
@@ -121,6 +122,30 @@ body {
 
 .main-nav a:hover {
   color: var(--primary);
+}
+
+.account-status {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.not-logged-in {
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.not-logged-in:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.logged-in {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  cursor: default;
 }
 
 .hero {
@@ -368,6 +393,32 @@ body {
 
 .footer-content p {
   margin: 0;
+}
+
+.account-status {
+  margin-left: auto;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.not-logged-in {
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.not-logged-in:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.logged-in {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  cursor: default;
 }
 
 @media (max-width: 640px) {
