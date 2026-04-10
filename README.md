@@ -1,12 +1,12 @@
 # History-Museum
 
-This is a history website for you to learn the major historical changes in 21 century
+This is a history website for you to learn important factoids about events or things that has shaped culture. Made for historian clients, intended to be used by a general audience.
 
   - Designed by:
-   - Hao Ding (Programmer,backend database set up, login&review function designer)
-   - Anton(Programmer)
-   - Alex(Visual designer)
-   - Hamza()
+   - Hao Ding (Programmer, backend database set up, login & review function designer.)
+   - Anton(Programmer, created inital design, search bar creator)
+   - Alex Sok (Visual Designer, animations, contents, and styling.) 101388692
+   - Hamza(Visual Designer, contents and styling)
 
 ## Recommended IDE Setup
 
