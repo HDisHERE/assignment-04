@@ -8,6 +8,10 @@ This is a history website for you to learn important factoids about events or th
    - Alex Sok (Visual Designer, animations, contents, and styling.) 101388692
    - Hamza(Visual Designer, contents and styling. Created design document & slides)
 
+## AI-Usage
+
+Used Chat-GPT to generate article content (Renaissance, World-War, Ancient Civilizaiton, Industrial Revolutuion), and to explain coding concepts.
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
