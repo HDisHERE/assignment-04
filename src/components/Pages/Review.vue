@@ -8,12 +8,13 @@
         or the research used to cover historical topics.
       </p>
 
-      <section class="page-section">
+      <article class="page-section">
         <h2>Submit a Complaint</h2>
         <p>
           If you find factual errors, unclear context, or concerns about how
           we presented historical information, we want to hear from you.
         </p>
+        </article>
 
         <article class="page-section">
           <h3>Research Accuracy</h3>
