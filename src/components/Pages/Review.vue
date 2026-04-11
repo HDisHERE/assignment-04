@@ -1,5 +1,5 @@
 <template>
-  <main class="page-main">
+  <main class="page-section">
     <div class="container">
       <h1>Site Feedback & Complaints</h1>
       <p>
