@@ -1,6 +1,7 @@
 <template>
-  <main class="page-section">
+  <main class="page-main">
     <div class="container">
+       <section class="page-section">
       <h1>Site Feedback & Complaints</h1>
       <p>
         Use this page to tell us about issues with the website, content,
